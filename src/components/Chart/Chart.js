@@ -33,6 +33,29 @@ const Chart = ({data: {confirmed, recovered, deaths}, country}) => {
                     fill: true,
                 }]
             }}
+            options={{
+                scales: {
+                   yAxes: [{
+                      ticks: {
+                         callback: function(value) {
+                            var ranges = [
+                               { divider: 1e6, suffix: 'M' },
+                               { divider: 1e3, suffix: 'k' }
+                            ];
+                            function formatNumber(n) {
+                               for (var i = 0; i < ranges.length; i++) {
+                                  if (n >= ranges[i].divider) {
+                                     return (n / ranges[i].divider).toString() + ranges[i].suffix;
+                                  }
+                               }
+                               return n;
+                            }
+                            return formatNumber(value);
+                         }
+                      }
+                   }]
+                }
+             }}
             
             />)
         : null
