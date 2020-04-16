@@ -1,0 +1,14 @@
+.container{
+    justify-content: center;
+    width: 85%;
+}
+
+canvas{
+    width: 100% !important;
+}
+
+@media (max-width: 770px){
+    .container{
+        width: 125% !important;
+    }
+}
