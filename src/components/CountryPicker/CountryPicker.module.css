@@ -1,4 +1,17 @@
 .formControl{
-    width: 30%;
+    width: 20%;
     margin-bottom: 30px !important;
+}
+
+select{
+    color: grey !important;
+    background-color: #eee !important;
+    border-radius: 4px !important;
+    padding: .5rem !important;
+    font-weight: 600 !important;
+    border: 2px solid #e8e8e9 !important;
+}
+
+select:hover{
+    border: 2px solid #e8e8e9 !important;
 }
