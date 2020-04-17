@@ -60,7 +60,7 @@ const DailyGraph = () =>{
         dailyData.length ?
         (<Bar 
             data={{
-                labels: dailyData.map(({date})=> new Date(date).toLocaleDateString("en-US", {month: 'short', day: 'numeric'}) > "25 March "),
+                labels: dailyData.map(({date})=> new Date(date).toLocaleDateString("en-US", {month: 'short', day: 'numeric'})),
                 datasets:[{
                     label: 'Daily Cases',
                     backgroundColor: 'rgba(255,0,0,0.7)',
