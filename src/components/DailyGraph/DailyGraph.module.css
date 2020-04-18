@@ -7,6 +7,26 @@ canvas{
     width: 100% !important;
 }
 
+.btn{
+    border: 1px solid orange;
+    background-color: antiquewhite;
+    padding: .5rem;
+    color: #fd7e14;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:focus {outline:0;}
+
+.buttonsDiv{
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.active{
+    background-color: rgba(255,193,7,.6);
+}
+
 @media (max-width: 770px){
     .container{
         width: 125% !important;
