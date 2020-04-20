@@ -10,13 +10,15 @@ const DailyGraph = () =>{
     const [activeClass, setActiveClass] = useState('0');
     const [fetchedData, setFetchedData] = useState([]);
     const [dailyData, setDailyData] = useState([]);
+    const [stateWise, setStateWise] = useState([]);
 
     useEffect(() => {
         const fetchApi = async () => {
             const data = (await axios.get('https://api.covid19india.org/data.json'))
-            console.log(data.data.cases_time_series);
+            console.log(data.data);
             setDailyData(data.data.cases_time_series);
             setFetchedData(data.data.cases_time_series);
+            setStateWise(data.data.statewise);
         }
         fetchApi();
     },[])
@@ -82,6 +84,34 @@ const DailyGraph = () =>{
         : null
     );
 
+    const stateWiseTable = (
+                <table cellSpacing="5px">
+                    <thead>
+                        <tr>
+                            <th className={styles.left}>State/UT</th>
+                            <th>Confirmed</th>
+                            <th>Active</th>
+                            <th>Recovered</th>
+                            <th>Deceased</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {stateWise.map(({state, confirmed, active, recovered, deaths},i) => 
+                                    state !== "Total" ?
+                                    (<tr key={i}>
+                                        <td className={styles.left}>{state}</td>
+                                        <td className={styles.right}>{confirmed}</td>
+                                        <td className={styles.right}>{active}</td>
+                                        <td className={styles.right}>{recovered}</td>
+                                        <td className={styles.right}>{deaths}</td>
+                                    </tr>)
+                                    : null
+                                    )}
+                        
+                    </tbody>
+                </table>
+    );
+
     return(
         <div className={styles.container}>
                 {lineChart}
@@ -91,6 +121,8 @@ const DailyGraph = () =>{
                     <button className={cx(styles.btn,  activeClass === '1' ? styles.active: '')} onClick={()=>showSpecificTimeData(7, "1")}>This Week</button>
                     <button className={cx(styles.btn,  activeClass === '2' ? styles.active: '')} onClick={()=>showSpecificTimeData(30, "2")}>One Month</button>
                 </div>
+                <h4 className={styles.center}>State wise Cases</h4>
+                {stateWiseTable}
         </div>
     )
 }

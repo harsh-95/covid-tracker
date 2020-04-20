@@ -7,6 +7,10 @@ canvas{
     width: 100% !important;
 }
 
+.center{
+    text-align: center;
+}
+
 .btn{
     border: 1px solid orange;
     background-color: antiquewhite;
@@ -23,12 +27,43 @@ button:focus {outline:0;}
     text-align: center;
 }
 
+th{
+    background-color: #e8e8ed;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+td{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.left{
+    text-align: left;
+    max-width: 150px;
+}
+
+.right{
+    text-align: right;
+}
+
 .active{
     background-color: rgba(255,193,7,.6);
 }
+
+@media screen and (max-width:480px){
+    tr {
+      font-size:8pt; 
+    }
+ }
 
 @media (max-width: 770px){
     .container{
         width: 125% !important;
     }
 }
+
