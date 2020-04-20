@@ -9,6 +9,7 @@ canvas{
 
 .center{
     text-align: center;
+    width: 50%;
 }
 
 .btn{
@@ -51,13 +52,45 @@ td{
     text-align: right;
 }
 
-.active{
+.active_button{
     background-color: rgba(255,193,7,.6);
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.label p:nth-child(2) {
+    font-size: 16pt;
+    font-weight: 700;
+  }
+
+.confirmed{
+    color: rgba(255,0,0,.8);
+}
+.active{
+    color: rgba(0,0,255,.8);
+}
+.recovered{
+    color: rgba(70,170,70,.8);
+}
+.deaths{
+    color: rgba(0,0,0,.5);
 }
 
 @media screen and (max-width:480px){
     tr {
       font-size:8pt; 
+    }
+    .header{
+        width: 100%;
+    }
+    .center{
+        width: 100%;
     }
  }
 

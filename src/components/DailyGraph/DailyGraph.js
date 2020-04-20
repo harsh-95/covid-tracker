@@ -112,16 +112,32 @@ const DailyGraph = () =>{
                 </table>
     );
 
+    const totalCasesHeader = (
+        <div>
+            {stateWise.map(({state, confirmed, active, recovered, deaths},i) => 
+                                    state === "Total" ?
+                                    (<div className={styles.header}>
+                                        <div className={cx(styles.label, styles.confirmed)}><p>Confirmed</p><p>{confirmed}</p></div>
+                                        <div className={cx(styles.label, styles.active)}><p>Active</p><p>{active}</p></div>
+                                        <div className={cx(styles.label, styles.recovered)}><p>Recovered</p><p>{recovered}</p></div>
+                                        <div className={cx(styles.label, styles.deaths)}><p>Deaths</p><p>{deaths}</p></div>
+                                     </div>)
+                                    : null
+                                    )}
+        </div>
+    );
+
     return(
         <div className={styles.container}>
                 {lineChart}
                 {barChart}
                 <div className={styles.buttonsDiv}>
-                    <button className={cx(styles.btn, activeClass === '0' ? styles.active: '')} onClick={()=>showSpecificTimeData(0, "0")}>Beginning</button>
-                    <button className={cx(styles.btn,  activeClass === '1' ? styles.active: '')} onClick={()=>showSpecificTimeData(7, "1")}>This Week</button>
-                    <button className={cx(styles.btn,  activeClass === '2' ? styles.active: '')} onClick={()=>showSpecificTimeData(30, "2")}>One Month</button>
+                    <button className={cx(styles.btn, activeClass === '0' ? styles.active_button: '')} onClick={()=>showSpecificTimeData(0, "0")}>Beginning</button>
+                    <button className={cx(styles.btn,  activeClass === '1' ? styles.active_button: '')} onClick={()=>showSpecificTimeData(7, "1")}>This Week</button>
+                    <button className={cx(styles.btn,  activeClass === '2' ? styles.active_button: '')} onClick={()=>showSpecificTimeData(30, "2")}>One Month</button>
                 </div>
-                <h4 className={styles.center}>State wise Cases</h4>
+                {totalCasesHeader}
+                <div className={styles.center}>State wise Cases</div>
                 {stateWiseTable}
         </div>
     )
