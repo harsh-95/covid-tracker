@@ -104,7 +104,7 @@ const DailyGraph = () =>{
                                         </td>
                                         <td className={styles.right}>
                                             <span className={cx(styles.delta, styles.confirmed)}>
-                                                {deltaconfirmed !== "0" ? "⯅"+deltaconfirmed: null}
+                                                {deltaconfirmed !== "0" ? "▲"+deltaconfirmed: null}
                                             </span>
                                             <span>{confirmed}</span>
                                         </td>
@@ -113,13 +113,13 @@ const DailyGraph = () =>{
                                         </td>
                                         <td className={styles.right}>
                                             <span className={cx(styles.delta, styles.recovered)}>
-                                                {deltarecovered !== "0" ? "⯅"+deltarecovered: null}
+                                                {deltarecovered !== "0" ? "▲"+deltarecovered: null}
                                             </span>
                                             <span>{recovered}</span>
                                         </td>
                                         <td className={styles.right}>
                                             <span className={cx(styles.delta, styles.deaths)}>
-                                                {deltadeaths !== "0" ? "⯅"+deltadeaths: null}
+                                                {deltadeaths !== "0" ? "🡹"+deltadeaths: null}
                                             </span>   
                                             <span>{deaths}</span>
                                         </td>
@@ -138,7 +138,7 @@ const DailyGraph = () =>{
                                     (<div className={styles.header} key={i}>
                                         <div className={cx(styles.label, styles.confirmed)}>
                                             <div>Confirmed</div>
-                                            <div>⯅{deltaconfirmed}</div>
+                                            <div>&#11205;{deltaconfirmed}</div>
                                             <div>{confirmed}</div>
                                         </div>
                                         <div className={cx(styles.label, styles.active)}>
@@ -148,12 +148,12 @@ const DailyGraph = () =>{
                                         </div>
                                         <div className={cx(styles.label, styles.recovered)}>
                                             <div>Recovered</div>
-                                            <div>⯅{deltarecovered}</div>
+                                            <div>&#11205;{deltarecovered}</div>
                                             <div>{recovered}</div>
                                         </div>
                                         <div className={cx(styles.label, styles.deaths)}>
                                             <div>Deaths</div>
-                                            <div>⯅{deltadeaths}</div>
+                                            <div>&#11205;{deltadeaths}</div>
                                             <div>{deaths}</div>
                                         </div>
                                      </div>)
