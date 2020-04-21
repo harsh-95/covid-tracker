@@ -119,7 +119,7 @@ const DailyGraph = () =>{
                                         </td>
                                         <td className={styles.right}>
                                             <span className={cx(styles.delta, styles.deaths)}>
-                                                {deltadeaths !== "0" ? "🡹"+deltadeaths: null}
+                                                {deltadeaths !== "0" ? "▲"+deltadeaths: null}
                                             </span>   
                                             <span>{deaths}</span>
                                         </td>
@@ -138,7 +138,7 @@ const DailyGraph = () =>{
                                     (<div className={styles.header} key={i}>
                                         <div className={cx(styles.label, styles.confirmed)}>
                                             <div>Confirmed</div>
-                                            <div>&#11205;{deltaconfirmed}</div>
+                                            <div>▲{deltaconfirmed}</div>
                                             <div>{confirmed}</div>
                                         </div>
                                         <div className={cx(styles.label, styles.active)}>
@@ -148,12 +148,12 @@ const DailyGraph = () =>{
                                         </div>
                                         <div className={cx(styles.label, styles.recovered)}>
                                             <div>Recovered</div>
-                                            <div>&#11205;{deltarecovered}</div>
+                                            <div>▲{deltarecovered}</div>
                                             <div>{recovered}</div>
                                         </div>
                                         <div className={cx(styles.label, styles.deaths)}>
                                             <div>Deaths</div>
-                                            <div>&#11205;{deltadeaths}</div>
+                                            <div>▲{deltadeaths}</div>
                                             <div>{deaths}</div>
                                         </div>
                                      </div>)
