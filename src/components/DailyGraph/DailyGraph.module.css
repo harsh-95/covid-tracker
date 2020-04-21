@@ -60,11 +60,15 @@ td{
     display: flex;
     justify-content: space-around;
     width: 50%;
-    margin-top: 2rem;
+    margin: 2rem 0;
     text-align: center;
 }
 
-.label p:nth-child(2) {
+.label div:nth-child(2) {
+    display: inline-block;
+  }
+
+.label div:nth-child(3) {
     font-size: 16pt;
     font-weight: 700;
   }
@@ -80,6 +84,12 @@ td{
 }
 .deaths{
     color: rgba(0,0,0,.5);
+}
+
+.delta{
+    font-size: 8pt;
+    padding: 0 4px 0 0px;
+    font-weight: 700;
 }
 
 @media screen and (max-width:480px){
