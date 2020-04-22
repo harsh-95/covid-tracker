@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2cef71a48829d14695f10a2fd10da98c",
+    "revision": "38481a3c5ef824fe197f9c6df60a4916",
     "url": "/covid-tracker/index.html"
   },
   {
-    "revision": "80ee6e94f76d0ead1baf",
-    "url": "/covid-tracker/static/css/main.aa25a679.chunk.css"
+    "revision": "85a588f68e6e9d956a6b",
+    "url": "/covid-tracker/static/css/main.4d09d419.chunk.css"
   },
   {
     "revision": "1b5e026ac98587f52361",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/covid-tracker/static/js/2.2fd52b84.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "80ee6e94f76d0ead1baf",
-    "url": "/covid-tracker/static/js/main.68a1d356.chunk.js"
+    "revision": "85a588f68e6e9d956a6b",
+    "url": "/covid-tracker/static/js/main.c24835ee.chunk.js"
   },
   {
     "revision": "5767bd1d46dd2aefcfdb",
