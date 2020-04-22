@@ -1,0 +1,89 @@
+.container{
+    width: 48%;
+    /*display: inline-block;*/
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    background-color: #e8e8ed;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+td{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.left{
+    text-align: left;
+    max-width: 150px;
+}
+
+.right{
+    text-align: right;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.label div:nth-child(2) {
+    display: inline-block;
+  }
+
+.label div:nth-child(3) {
+    font-size: 16pt;
+    font-weight: 700;
+  }
+
+.confirmed{
+    color: rgba(255,0,0,.8);
+}
+.active{
+    color: rgba(0,0,255,.8);
+}
+.recovered{
+    color: rgba(70,170,70,.8);
+}
+.deaths{
+    color: rgba(0,0,0,.5);
+}
+
+.delta{
+    font-size: 8pt;
+    padding: 0 4px 0 0px;
+    font-weight: 700;
+}
+
+@media screen and (max-width:480px){
+    .container{
+        width: 100%;
+    }
+    tr {
+      font-size:8pt; 
+    }
+    .header{
+        width: 100%;
+    }
+    .center{
+        width: 100%;
+    }
+ }
+
+ @media (max-width: 770px){
+    .container{
+        width: 125% !important;
+    }
+}

@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const url = 'https://covid19.mathdro.id/api/';
+const secondUrl = 'https://api.covid19india.org/data.json';
 
 export const fetchData = async () => {
 
@@ -43,6 +44,15 @@ export const fetchCountryData = async (country) => {
     try{
         const {data: {confirmed, recovered, deaths, lastUpdate}} = await axios.get(url+'countries/'+country);
         return {confirmed, recovered, deaths, lastUpdate};
+    } catch(error){
+
+    }
+}
+
+export const fetchStateWiseDetails = async () => {
+    try{
+        const data = await axios.get(secondUrl);
+        return data;
     } catch(error){
 
     }
