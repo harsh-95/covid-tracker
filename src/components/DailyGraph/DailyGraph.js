@@ -30,7 +30,7 @@ const DailyGraph = () =>{
                 labels: dailyData.map(({date})=> new Date(date).toLocaleDateString("en-Us",{month: 'short', day: 'numeric'})),
                 datasets: [{
                     data: dailyData.map(({totalconfirmed})=> totalconfirmed),
-                    label: 'Infected',
+                    label: 'Infected Cases in India',
                     borderColor: '#3333ff',
                     fill: true,
                 }]
