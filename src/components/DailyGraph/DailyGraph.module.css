@@ -7,11 +7,6 @@ canvas{
     width: 100% !important;
 }
 
-.center{
-    text-align: center;
-    width: 50%;
-}
-
 .btn{
     border: 1px solid orange;
     background-color: antiquewhite;
