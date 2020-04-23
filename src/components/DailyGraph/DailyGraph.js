@@ -75,7 +75,7 @@ const DailyGraph = () =>{
             data={{
                 labels: dailyData.map(({date})=> new Date(date).toLocaleDateString("en-US", {month: 'short', day: 'numeric'})),
                 datasets:[{
-                    label: 'Daily Cases',
+                    label: 'Daily Cases India',
                     backgroundColor: 'rgba(255,0,0,0.7)',
                     data:dailyData.map(({dailyconfirmed})=> dailyconfirmed),
                 }]
@@ -90,7 +90,7 @@ const DailyGraph = () =>{
                 {barChart}
                 <div className={styles.buttonsDiv}>
                     <button className={cx(styles.btn, activeClass === '0' ? styles.active_button: '')} onClick={()=>showSpecificTimeData(0, "0")}>Beginning</button>
-                    <button className={cx(styles.btn,  activeClass === '1' ? styles.active_button: '')} onClick={()=>showSpecificTimeData(7, "1")}>This Week</button>
+                    <button className={cx(styles.btn,  activeClass === '1' ? styles.active_button: '')} onClick={()=>showSpecificTimeData(8, "1")}>This Week</button>
                     <button className={cx(styles.btn,  activeClass === '2' ? styles.active_button: '')} onClick={()=>showSpecificTimeData(30, "2")}>One Month</button>
                 </div>
         </div>

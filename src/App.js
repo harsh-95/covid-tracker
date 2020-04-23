@@ -43,6 +43,7 @@ class App extends Component{
                 
                 <StateWiseTable />
                 <DailyGraph />
+                <div className={styles.heading}>World wide Cases</div>
                 <Cards data={data}/>
                 <CountryPicker handleCountryChange={this.handleCountryChange}/>
                 <Chart data={data} country={country}/>

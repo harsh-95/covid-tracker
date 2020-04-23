@@ -2,7 +2,7 @@
     margin-bottom: 30px !important;
 }
 
-select{
+.formControl select{
     color: grey !important;
     background-color: #eee !important;
     border-radius: 4px !important;
@@ -11,6 +11,10 @@ select{
     border: 2px solid #e8e8e9 !important;
 }
 
-select:hover{
-    border: 2px solid #e8e8e9 !important;
+.formControl select:focus{
+    outline: 0 !important;
 }
+
+*:focus {
+    outline: 0;
+  }

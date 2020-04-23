@@ -99,7 +99,7 @@ const StateWiseTable = () => {
 return(
     <div className={styles.container}>
         {totalCasesHeader}
-        <div className={styles.center}>State wise Cases</div>
+        <div className={styles.center}>State wise Cases (India)</div>
         {stateWiseTable}
     </div>
 );

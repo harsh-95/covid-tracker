@@ -1,5 +1,5 @@
 * {
-    font-family: varela round;
+    font-family: varela round !important;
 }
 
 .container{
@@ -11,6 +11,10 @@
 
 .image{
     width: 350px;
+}
+
+.heading{
+    margin: 25px 0 0 0;
 }
 
 @media(max-width: 770px){
