@@ -13,6 +13,8 @@ const StateWiseTable = () => {
         const fetchApi = async () => {
             const {data: {statewise}} = await fetchStateWiseDetails();
             console.log(statewise);
+            //remove first object(total cases) and add at the end
+            statewise.push(statewise.shift());
             setStateWise(statewise);
         }
         fetchApi();
@@ -62,8 +64,7 @@ const StateWiseTable = () => {
             </thead>
             <tbody>
                 {stateWise.map(({state, confirmed, active, recovered, deaths, deltaconfirmed, deltarecovered, deltadeaths},i) => 
-                            state !== "Total" ?
-                            (<tr key={i}>
+                            <tr key={i}>
                                 <td className={styles.left}>
                                     {state}
                                 </td>
@@ -89,8 +90,7 @@ const StateWiseTable = () => {
                                     <span>{deaths}</span>
                                 </td>
                             </tr>)
-                            : null
-                            )}
+                            }
                 
             </tbody>
         </table>
